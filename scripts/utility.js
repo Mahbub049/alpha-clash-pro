@@ -11,6 +11,10 @@ function setBackgroundColor(elementID){
     document.getElementById(elementID).classList.add('bg-[#FFA500]')
 }
 
+function removeBackgroundColor(elementID){
+    document.getElementById(elementID).classList.remove('bg-[#FFA500]')
+}
+
 function getRandomLetter(){
     //String Array
     const string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
