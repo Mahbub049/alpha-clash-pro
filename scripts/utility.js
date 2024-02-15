@@ -30,3 +30,14 @@ function getRandomLetter(){
 function setLetter(IDName, letter){
     document.getElementById(IDName).innerText = letter;
 }
+
+function getButtonTextNumber(elementName){
+    const element = document.getElementById(elementName);
+    const elementConvertedValue = parseInt(element.innerText);
+    return elementConvertedValue;
+}
+
+function setButtonNumber(elementName,value){
+    const element = document.getElementById(elementName);
+    element.innerText = value;
+}
