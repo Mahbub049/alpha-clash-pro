@@ -74,14 +74,14 @@
                 <button class="flex gap-2 bg-[#360490] rounded-[30px] text-xl font-medium items-center text-white px-8 py-4">Score <img src="./images/money.png" alt=""><span id="score">0</span></button>
             </div>
         </section>
-        <section id="score" class="Score poppins hidden">
+        <section id="final-score" class="poppins hidden">
             <div class="text-white min-h-screen flex flex-col items-center justify-center  ">
                 <div class="bg-gradient-to-r from-[#ffffff8f] to-purple-900 flex flex-col items-center justify-center px-12 py-11 rounded-2xl border-white">
                     <div class="text-[64px] flex gap-4 uppercase">
-                        <h1 class="font-extrabold">Score:</h1>
-                        <span> 14</span>
+                        <h1 class="font-extrabold">Score: </h1>
+                        <span id="total-score"></span>
                     </div>
-                    <button class="text-2xl font-semibold px-8 py-4 bg-white text-black rounded-lg mb-4">Play Again</button>
+                    <button onclick="play()" class="text-2xl font-semibold px-8 py-4 bg-white text-black rounded-lg mb-4">Play Again</button>
                     <p class="text-xl font-medium">Practice will make you a Pro</p>
                 </div>
             </div>
