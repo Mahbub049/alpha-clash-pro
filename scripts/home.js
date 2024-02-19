@@ -1,4 +1,9 @@
+const audio = new Audio();
+let isGameOn = false;
+
 function play(){
+    isGameOn = true;
+
     hideElement('home');
     hideElement('final-score');
     unhideElement('keyboard');
@@ -10,6 +15,7 @@ function play(){
 }
 
 function checkButton(event){
+    if(isGameOn === false) return;
     const KeyPressed = event.key;
     const pressedButton = KeyPressed.toLowerCase();
     const expectedButton = document.getElementById('text-random').innerText.toLowerCase();
@@ -31,6 +37,9 @@ function checkButton(event){
         const newScore = score+1;
         setButtonNumber('score',newScore);
 
+        audio.src = "../sounds/success.mp3";
+        audio.play();
+
         removeBackgroundColor(expectedButton.toUpperCase());
         continueGame();
     }
@@ -39,9 +48,14 @@ function checkButton(event){
         const newLife = life - 1;
         setButtonNumber('life',newLife);
 
+        audio.src = "../sounds/wrong.mp3";
+        audio.play();
+
         if(newLife === 0){
             hideElement('keyboard');
             unhideElement('final-score');
+
+            isGameOn = false;
 
             const totalScore = getButtonTextNumber('score');
             setButtonNumber('total-score', totalScore);
