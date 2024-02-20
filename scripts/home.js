@@ -37,7 +37,7 @@ function checkButton(event){
         const newScore = score+1;
         setButtonNumber('score',newScore);
 
-        audio.src = "./sounds/success.mp3";
+        audio.src = ".\sounds\success.mp3";
         audio.play();
 
         removeBackgroundColor(expectedButton.toUpperCase());
@@ -48,7 +48,7 @@ function checkButton(event){
         const newLife = life - 1;
         setButtonNumber('life',newLife);
 
-        audio.src = "./sounds/wrong.mp3";
+        audio.src = ".\sounds\success.mp3";
         audio.play();
 
         if(newLife === 0){
